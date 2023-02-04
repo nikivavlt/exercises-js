@@ -1,7 +1,7 @@
 /*
 An alternative to the JSON.stringify() function. But with the following differences:
-1. Keys and string values without quotes;
-2. The string in the line ends with the value itself, without a comma.
+1. Keys and string values without quotes.
+2. String (line) end with the value itself, without a comma. 
 */
 
 const isNotObject = (data) => (typeof data !== 'object' || data === null);
