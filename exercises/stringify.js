@@ -1,30 +1,34 @@
+/* eslint-disable no-console */
 /*
 An alternative to the JSON.stringify() function. But with the following differences:
 1. Keys and string values without quotes.
-2. String (line) end with the value itself, without a comma. 
+2. String (line) end with the value itself, without a comma.
 */
 
 const isNotObject = (data) => (typeof data !== 'object' || data === null);
 
-const stringify = (value, replacer = ' ', spacesCount = 1) => {
-  const makeString = (currentValue, depth) => {
-    if (isNotObject(currentValue)) return `${currentValue}`;
+const stringify = (data, replacer = ' ', spacesCount = 1) => {
+  const makeString = (currentData, depth) => {
+    const openBracket = '{';
+    const closeBracket = '}';
+
+    if (isNotObject(currentData)) return `${currentData}`;
 
     const spaceSize = spacesCount * depth;
     const space = replacer.repeat(spaceSize);
     const bracketSpace = replacer.repeat(spaceSize - spacesCount);
     const string = Object
-      .entries(currentValue)
-      .map(([key, val]) => `${space}${key}: ${makeString(val, depth + 1)}`);
+      .entries(currentData)
+      .map(([key, value]) => `${space}${key}: ${makeString(value, depth + 1)}`);
 
     return [
-      '{',
+      openBracket,
       ...string,
-      `${bracketSpace}}`,
+      `${bracketSpace}${closeBracket}`,
     ].join('\n');
   };
 
-  return makeString(value, 1);
+  return makeString(data, 1);
 };
 
 const nested = {
