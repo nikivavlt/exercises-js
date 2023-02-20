@@ -1,10 +1,10 @@
-function findGreatestNumber(arrayOfElements) {
-  return arrayOfElements
+function findGreatestNumber(arrayOfNumbers) {
+  return arrayOfNumbers
     .reduce((accumulator, element) =>
       accumulator < element
         ? element
         : accumulator,
-    arrayOfElements[0],
+    arrayOfNumbers[0],
     );
 }
 
