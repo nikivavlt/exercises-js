@@ -1,6 +1,6 @@
 /*
-substr() method analogy. Function returns a portion of the string,
-starting at the specified index and extending for a given number of characters afterwards.
+The function cuts substring from the given string at the passed length
+starting from the particular index.
 */
 
 const substr = (string, index = 0, length = string.length) => {
