@@ -1,29 +1,27 @@
 /*
 substr() method analogy. Function returns a portion of the string,
 starting at the specified index and extending for a given number of characters afterwards.
-* Rewrite
 */
 
-const substr = (string, firstIndex = 0, length = string.length) => {
-  if (firstIndex < 0) firstIndex = 0;
+const substr = (string, index = 0, length = string.length) => {
+  let firstIndex = index;
 
-  if (length < 0) length = 1;
+  if (index < 0) firstIndex = 0;
 
-  if (firstIndex > length) return '';
+  let lastIndex = length - 1 + firstIndex;
 
-  if ((firstIndex + length - 1) >= string.length) length = string.length - firstIndex;
+  if (length < 0) lastIndex = firstIndex;
+  if (firstIndex > lastIndex) return '';
+  if (length === 0) return '';
+
+  if (lastIndex > string.length) lastIndex = string.length - 1;
 
   let answer = '';
-
-  let amountOfSymbols = length;
-
-  for (let i = firstIndex; amountOfSymbols > 0; i += 1) {
+  for (let i = firstIndex; i <= lastIndex; i += 1) {
     answer += string[i];
-
-    amountOfSymbols -= 1;
   }
 
   return answer;
 };
 
-substr('abba', 0, 1);
+substr('cutthisstring', -1, 3);
