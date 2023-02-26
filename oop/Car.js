@@ -1,6 +1,8 @@
+import Vehicle from './Vehicle.js';
+
 const listOfVehicle = new Set();
 
-class Vehicle {
+class Car {
   name;
 
   color;
@@ -30,24 +32,24 @@ class Vehicle {
   }
 }
 
-Vehicle.prototype.fuelType = ''; // Add new attributes or methods to the class through constructor prototype;
+Car.prototype.fuelType = ''; // Add new attributes or methods to the class through constructor prototype;
 
-const tesla = new Vehicle('Tesla', 'Pink', 'Electric');
-const mercedes = new Vehicle('Mercedes-Benz', 'Black', 'Coupe');
+const tesla = new Car('Tesla', 'Pink', 'Electric');
+const mercedes = new Car('Mercedes-Benz', 'Black', 'Coupe');
 
 tesla.setFuelType('None');
 mercedes.setFuelType('Gasoline');
 
-Vehicle.listName = 'Vehicle list 2023'; // Change static class attribute for all Vehicle class objects;
+Car.listName = 'Vehicle list 2023'; // Change static class attribute for all Vehicle class objects;
 
-Vehicle.setListName('New vehicle list 2023');
+Car.setListName('New vehicle list 2023');
 
 const getVehiclesList = () => {
   const newList = [...listOfVehicle].map((element) => `Name: ${element.name}
   Color: ${element.color}
   Type: ${element.type}
   Fuel type: ${element.fuelType}
-  List name: ${Vehicle.listName}`);
+  List name: ${Car.listName}`);
 
   return newList.join('\n');
 };
