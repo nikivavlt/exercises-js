@@ -1,3 +1,5 @@
+/* eslint-disable import/extensions */
+/* eslint-disable no-unused-vars */
 import Vehicle from './Vehicle.js';
 
 const listOfVehicle = new Set();
@@ -53,5 +55,3 @@ const getVehiclesList = () => {
 
   return newList.join('\n');
 };
-
-console.log(getVehiclesList());
