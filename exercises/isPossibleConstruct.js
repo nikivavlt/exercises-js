@@ -1,3 +1,5 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable consistent-return */
 /*
 Predicate function receives a set of symbols and the initial string.
 After function determine whether it is possible to construct the original string

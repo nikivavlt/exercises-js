@@ -1,10 +1,11 @@
+/* eslint-disable no-confusing-arrow */
 function findGreatestNumber(arrayOfNumbers) {
   return arrayOfNumbers
-    .reduce((accumulator, element) =>
-      accumulator < element
+    .reduce(
+      (accumulator, element) => accumulator < element
         ? element
         : accumulator,
-    arrayOfNumbers[0],
+      arrayOfNumbers[0],
     );
 }
 

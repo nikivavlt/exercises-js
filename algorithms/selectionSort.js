@@ -2,7 +2,8 @@
 Selection sort is a basic algorithm that takes the first element of the collection
 as the smallest and compares it with other elements, if there is an element less
 than the first one at the end of search, it puts this element at the beginning.
-During the next iteration, the loop excludes the first element from the search and takes the next one.
+During the next iteration, the loop excludes the first element from the search
+and takes the next one.
 */
 
 const selectionSort = (arrayOfElements) => {

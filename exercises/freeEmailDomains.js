@@ -41,4 +41,4 @@ const getFreeDomains = (emailsList) => {
   return answer;
 };
 
-console.log(getFreeDomains(emails));
+getFreeDomains(emails);

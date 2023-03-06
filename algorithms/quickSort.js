@@ -1,3 +1,5 @@
+/* eslint-disable no-constant-condition */
+/* eslint-disable no-param-reassign */
 /*
 Quick sort - basic algorithm that compares the leftmost element and the rightmost element,
 and if they are not in the correct sequence, swaps them.
@@ -24,7 +26,7 @@ const partition = (subArray, leftIndex, rightIndex, supportElement) => {
 const quickSort = (array, left = 0, right = array.length - 1) => {
   const length = right - left + 1;
 
-  if (length < 2) return;
+  if (length < 2) return array;
 
   const newArray = array;
   const supportElement = array[left];

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /*
 The function fizzBuzz takes two integers and outputs a range of numbers from
 the first to the last integer (inclusive).
