@@ -1,17 +1,11 @@
 {
-  "name": "wix-assignment",
+  "name": "sheets-evaluator",
   "version": "1.0.0",
-  "description": "Wix assignment prepared by Nikita Ivanov",
+  "description": "Sheets evaluator",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nikita Ivanov",
-  "license": "ISC",
-  "devDependencies": {
-    "axios": "^1.4.0",
-    "eslint": "^8.44.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
-  }
+  "license": "ISC"
 }
