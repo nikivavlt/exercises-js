@@ -10,11 +10,28 @@ class Person {
   birthDay;
 
   constructor(firstName, lastName, birthYear, birthMonth, birthDay) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.birthYear = birthYear;
-    this.birthMonth = birthMonth;
-    this.birthDay = birthDay;
+    try {
+      if (firstName === null || firstName === ' ') {
+        throw new Error("FirstName can't be null or whitespace");
+      }
+
+      if (lastName === null || lastName === ' ') {
+        throw new Error("LastName can't be null or whitespace");
+      }
+
+      const birth = new Date();
+      birth.setFullYear(birthYear, birthMonth - 1, birthDay);
+      if (birth > new Date()) {
+        throw new Error("Birthday date is greater than current day");
+      }
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.birthYear = birthYear;
+      this.birthMonth = birthMonth;
+      this.birthDay = birthDay;
+    } catch (error) {
+      throw (error);
+    }
   }
 
   getFirstName() {
@@ -71,6 +88,6 @@ class Person {
   }
 }
 
-const person = new Person('Nikita', 'Ivanov', 2000, 11, 1);
+const person = new Person('Nikita', 'Ivanov', 2000, 5, 17);
 
-console.log(person.getDayNumberBeforeBirthday());
+console.log(person);
