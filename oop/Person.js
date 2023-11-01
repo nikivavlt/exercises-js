@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-catch */
 class Person {
   firstName;
 
@@ -22,7 +23,7 @@ class Person {
       const birth = new Date();
       birth.setFullYear(birthYear, birthMonth - 1, birthDay);
       if (birth > new Date()) {
-        throw new Error("Birthday date is greater than current day");
+        throw new Error('Birthday date is greater than current day');
       }
       this.firstName = firstName;
       this.lastName = lastName;
@@ -90,4 +91,3 @@ class Person {
 
 const person = new Person('Nikita', 'Ivanov', 2000, 5, 17);
 
-console.log(person);
