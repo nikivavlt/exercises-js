@@ -91,3 +91,4 @@ class Person {
 
 const person = new Person('Nikita', 'Ivanov', 2000, 5, 17);
 
+console.log(person);
