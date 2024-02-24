@@ -27,3 +27,46 @@ const selectionSort = (arrayOfElements) => {
 const numbers = [4, 7, 5, 10, 1, 6, 9, 3, 8, 2];
 
 selectionSort(numbers);
+
+
+/*
+Second implementation of the algorithm
+-
+function findLargerAmount(array) {
+  let currentLargerAmount = 0;
+  let largestElementId = {};
+
+  array.forEach(element => {
+    if (currentLargerAmount < element.amount) {
+      currentLargerAmount = element.amount;
+      largestElementId  = array.indexOf(element);
+    }
+  });
+
+  return largestElementId;
+}
+
+const selectionSort = (array) => {
+  const initialArray = [...array];
+  const sortedArray = [];
+
+  array.forEach((element) => {
+    const largestElementId = findLargerAmount(initialArray);
+    
+    sortedArray.push(initialArray[largestElementId]);
+    initialArray.splice(largestElementId, 1);
+  });
+
+  return sortedArray;
+};
+
+const data = [
+  { name: 'Ireland', amount: 32 },
+  { name: 'Lithuania', amount: 45 },
+  { name: 'Sweden', amount: 403 },
+  { name: 'Russia', amount: 20 },
+  { name: 'German', amount: 95 },
+  { name: 'USA', amount: 139 },
+  { name: 'Canada', amount: 288 },
+];
+*/
