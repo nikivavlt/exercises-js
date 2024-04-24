@@ -28,7 +28,6 @@ const numbers = [4, 7, 5, 10, 1, 6, 9, 3, 8, 2];
 
 selectionSort(numbers);
 
-
 /*
 Second implementation of the algorithm
 -
@@ -52,7 +51,7 @@ const selectionSort = (array) => {
 
   array.forEach((element) => {
     const largestElementId = findLargerAmount(initialArray);
-    
+
     sortedArray.push(initialArray[largestElementId]);
     initialArray.splice(largestElementId, 1);
   });

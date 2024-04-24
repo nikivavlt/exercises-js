@@ -5,4 +5,4 @@
 ___
 
 ### Description:
-Repository for practicing JavaScript exercises.
+Repository for practicing JavaScript exercises, assignments, algorithms.

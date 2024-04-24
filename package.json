@@ -6,7 +6,7 @@
   },
   "name": "exercises-js",
   "type": "module",
-  "description": "Repository for practicing JavaScript exercises.",
+  "description": "Repository for practicing JavaScript exercises, assignments, algorithms.",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {

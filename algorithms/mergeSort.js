@@ -28,4 +28,4 @@ const mergeSort = (array) => {
 
 const dataArray = [2, 1, 9, 6, 5, 3];
 
-console.log(mergeSort(dataArray));
+mergeSort(dataArray);
