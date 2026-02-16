@@ -1,4 +1,4 @@
-import countryList from './countries';
+import countryList from './countries.js';
 
 function searchCountryBy(key, keyword) {
   let firstElement = 0;

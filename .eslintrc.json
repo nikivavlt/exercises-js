@@ -10,6 +10,9 @@
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
+    "settings": {
+        "import/core-modules": ["node:test", "node:assert/strict"]
+    },
     "rules": {
         "import/extensions": [
             "error",

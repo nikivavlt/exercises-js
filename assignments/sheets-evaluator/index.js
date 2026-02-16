@@ -1,5 +1,5 @@
-const { fetchData, postData } = require('./src/data-tools');
-const { filterSheets } = require('./src/sheets-tools');
+const { fetchData, postData } = require('./src/data-tools.js');
+const { filterSheets } = require('./src/sheets-tools.js');
 
 const hubUrl = 'https://www.wix.com/_serverless/hiring-task-spreadsheet-evaluator';
 
